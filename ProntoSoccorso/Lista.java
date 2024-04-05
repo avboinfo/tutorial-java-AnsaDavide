@@ -1,10 +1,10 @@
 package L_Lista;
 
-public class ListaGen {
+public class Lista<T> {
 
     NodoGen<T> root;
 
-    public ListaGen() {
+    public Lista() {
         this.root = null;
     }
 
@@ -16,11 +16,11 @@ public class ListaGen {
         add
     }
 
-    public void addTail( NodoGen<T> n) {
+    public void addTail( Nodo<T> n) {
         if (root==null) {
             root n;
         } else {
-            NodoGen<T> tmp = root;
+            Nodo<T> tmp = root;
             while (tmp.getSuccessivo()!=null) tmp=tmp.getSuccessivo();
             tmp.setSuccessivo( n );
         }
@@ -28,7 +28,7 @@ public class ListaGen {
 
     public String toString() {
         String s = "La lista contiene i seguenti elementi:\n";
-        NodoGen<T> tmp = root;
+        Nodo<T> tmp = root;
         while(tmp!= null){
             s += p + "\n";
             p = p.getSuccessivo();
