@@ -1,33 +1,33 @@
-package L_Lista;
+package ProntoSoccorso;
 
 public class Nodo<T> {
 
     private T valore;
-    private NodoGen<T> successivo;
+    private Nodo<T> successivo;
 
-    public NodoGen(T valore) {
-    this.valore = valore;
-    successivo = null;
-}  
+    public Nodo( T valore ) {
+        this.valore = valore;
+        successivo = null;
+    }
 
     public void setValore( T valore ) {
         this.valore = valore;
     }
 
-    public T GetValore(){
+    public T getValore() {
         return valore;
     }
 
-    public NodoGen<T> getSuccessivo() {
+    public Nodo<T> getSuccessivo() {
         return successivo;
     }
 
-    public void setSuccessivo(NodoGen<T> successivo) {
+    public void setSuccessivo(Nodo<T> successivo) {
         this.successivo = successivo;
     }
 
     public String toString() {
         return "Il mio valore è: " + valore;
-}
+    }
 
 }

@@ -1,24 +1,21 @@
-package L_Lista;
+package ProntoSoccorso;
+
 
 public class Lista<T> {
 
-    NodoGen<T> root;
+    Nodo<T> root;
 
     public Lista() {
         this.root = null;
     }
 
-    public void addTail(T v) {
-        addTail(new NodoGen)
+    public void addTail(T v ) {
+        addTail( new Nodo<T>( v ) );
     }
 
-    public void addTail(T v) {
-        add
-    }
-
-    public void addTail( Nodo<T> n) {
+    public void addTail( Nodo<T> n ) {
         if (root==null) {
-            root n;
+            root = n;
         } else {
             Nodo<T> tmp = root;
             while (tmp.getSuccessivo()!=null) tmp=tmp.getSuccessivo();
@@ -27,14 +24,15 @@ public class Lista<T> {
     }
 
     public String toString() {
-        String s = "La lista contiene i seguenti elementi:\n";
+        String s = "\nLIST BEGIN *************\n";
         Nodo<T> tmp = root;
-        while(tmp!= null){
-            s += p + "\n";
-            p = p.getSuccessivo();
+        while (tmp!=null) {
+            s += tmp + "\n";
+            tmp=tmp.getSuccessivo();
         }
-        s += "*** The END OF THE LIST ***\n";
+        s += "********************* LIST END\n";
         return s;
     }
-    
+
+
 }
